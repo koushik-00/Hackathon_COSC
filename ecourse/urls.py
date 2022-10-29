@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from django.conf import settings
+from django.conf.urls.static import static
+import ecapp.views as v1
+import signupapp.views as v2
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),path('course/', v1.display),
+    path('register/',v2.register),
+
 ]
+
+if settings.DEBUG:
+        urlpatterns += static(settings.MEDIA_URL,
+                              document_root=settings.MEDIA_ROOT)
