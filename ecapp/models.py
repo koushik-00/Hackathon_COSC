@@ -5,6 +5,10 @@ from distutils.command.upload import upload
 
 class course(models.Model):
     Coursename=models.CharField(max_length=150)
+    CDescription=models.TextField()
+    CObjectives=models.TextField()
+    COutcomes=models.TextField()
+    Cost=models.FloatField()
 
     
     

@@ -19,9 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 import ecapp.views as v1
 import signupapp.views as v2
+import loginapp.views as v3
 urlpatterns = [
     path('admin/', admin.site.urls),path('course/', v1.display),
-    path('register/',v2.register),
+    path('register/',v2.register),path('login/',v3.login),
 
 ]
 
