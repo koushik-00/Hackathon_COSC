@@ -23,4 +23,8 @@ def search(request):
 
         return render(request,'search_result.html',{'searched':searched,'course':course})
     else:
-        return render(request,'search_result.html',{})    
+        return render(request,'search_result.html',{})  
+def cartadd(request):
+    ec_list=course.objects.all()
+    my_dict={'ec_list':ec_list}
+    return render(request,'cart.html',context=my_dict)  

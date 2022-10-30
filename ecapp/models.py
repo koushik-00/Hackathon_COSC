@@ -9,6 +9,8 @@ class course(models.Model):
     CObjectives=models.TextField()
     COutcomes=models.TextField()
     Cost=models.FloatField()
+    image=models.ImageField(null=True,blank=True,upload_to="images/")
+    
 
     
     

@@ -23,7 +23,7 @@ import loginapp.views as v3
 urlpatterns = [
     path('admin/', admin.site.urls),path('course/', v1.display),
     path('register/',v2.register),path('login/',v3.login),
-    path('cinput/',v1.cinpt),
+    path('cinput/',v1.cinpt),path('cartadd/',v1.cartadd),
 
 ]
 

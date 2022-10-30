@@ -8,10 +8,11 @@
 </head>
 <body>
 <h1>SignIN</h1>
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
 {{form.as_p}}
 {% csrf_token %}
 <input type="submit" value="send">
+
 </form>
 </body>
 </html>
